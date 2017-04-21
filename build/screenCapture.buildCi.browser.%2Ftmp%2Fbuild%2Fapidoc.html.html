@@ -1,0 +1,1649 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/don/cordova-plugin-ble-central#readme">cordova-plugin-ble-central (v1.1.4)</a>
+</h1>
+<h4>Bluetooth Low Energy (BLE) Central Plugin</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-ble-central">module cordova-plugin-ble-central</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-ble-central.</span>BLECentralPlugin</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-ble-central.</span>ble</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-ble-central.BLECentralPlugin">module cordova-plugin-ble-central.BLECentralPlugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.connect">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>connect
+            <span class="apidocSignatureSpan">(device_id, connectSuccess, connectFailure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.disconnect">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>disconnect
+            <span class="apidocSignatureSpan">(device_id, connectSuccess, connectFailure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.enable">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>enable
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isConnected">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>isConnected
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isEnabled">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>isEnabled
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.read">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>read
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.readRSSI">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>readRSSI
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.scan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>scan
+            <span class="apidocSignatureSpan">(services, seconds, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.showBluetoothSettings">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>showBluetoothSettings
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startNotification">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startNotification
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startScan
+            <span class="apidocSignatureSpan">(services, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScanWithOptions">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startScanWithOptions
+            <span class="apidocSignatureSpan">(services, options, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startStateNotifications">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startStateNotifications
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopNotifcation">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopNotifcation
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopScan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopScan
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopStateNotifications">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopStateNotifications
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.write">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>write
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, data, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.writeWithoutResponse">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>writeWithoutResponse
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, data, success, failure)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-ble-central.ble">module cordova-plugin-ble-central.ble</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.connect">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>connect
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.disconnect">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>disconnect
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.enable">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>enable
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.isConnected">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>isConnected
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.isEnabled">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>isEnabled
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.list">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>list
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.notify">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>notify
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.read">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>read
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.readRSSI">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>readRSSI
+            <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.scan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>scan
+            <span class="apidocSignatureSpan">(services, seconds, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.showBluetoothSettings">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>showBluetoothSettings
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.startNotification">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startNotification
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.startScan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startScan
+            <span class="apidocSignatureSpan">(services, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.startScanWithOptions">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startScanWithOptions
+            <span class="apidocSignatureSpan">(services, options, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.startStateNotifications">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startStateNotifications
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.stopNotification">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopNotification
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.stopScan">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopScan
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.stopStateNotifications">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopStateNotifications
+            <span class="apidocSignatureSpan">(success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.write">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>write
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.writeCommand">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>writeCommand
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-ble-central.ble.writeWithoutResponse">
+            function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>writeWithoutResponse
+            <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>withPromises</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-ble-central" id="apidoc.module.cordova-plugin-ble-central">module cordova-plugin-ble-central</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-ble-central.BLECentralPlugin" id="apidoc.module.cordova-plugin-ble-central.BLECentralPlugin">module cordova-plugin-ble-central.BLECentralPlugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.connect" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.connect">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>connect
+        <span class="apidocSignatureSpan">(device_id, connectSuccess, connectFailure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (device_id, connectSuccess, connectFailure) {
+    notSupported();
+    if (connectFailure) connectFailure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }, 5000);
+    */
+
+## connect
+
+Connect to a peripheral.
+
+    ble.<span class="apidocCodeKeywordSpan">connect</span>(device_id, connectSuccess, connectFailure);
+
+### Description
+
+Function `connect` connects to a BLE peripheral. The callback is long running. Success will be called when the connection is successful
+. Service and characteristic info will be passed to the success callback in the [peripheral object](#peripheral-data). Failure is
+ called if the connection fails, or later if the peripheral disconnects. An peripheral object is passed to the failure callback.
+
+[ble.scan](#scan) must be called before calling connect, so the plugin has a list of avaiable peripherals.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.disconnect" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.disconnect">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>disconnect
+        <span class="apidocSignatureSpan">(device_id, connectSuccess, connectFailure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function (device_id, connectSuccess, connectFailure) {
+    notSupported();
+    if (connectFailure) connectFailure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __connectSuccess__: Success callback function that is invoked when the connection is successful.
+- __connectFailure__: Error callback function, invoked when error occurs or the connection disconnects.
+
+## disconnect
+
+Disconnect.
+
+    ble.<span class="apidocCodeKeywordSpan">disconnect</span>(device_id, [success], [failure]);
+
+### Description
+
+Function `disconnect` disconnects the selected device.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.enable" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.enable">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>enable
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enable = function (success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    ble.showBluetoothSettings();
+
+## enable
+
+Enable Bluetooth on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">enable</span>(success, failure);
+
+### Description
+
+Function `enable` prompts the user to enable Bluetooth.
+
+#### Android
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isConnected" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isConnected">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>isConnected
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isConnected = function (device_id, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the notification is removed. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## isConnected
+
+Reports the connection status.
+
+    ble.<span class="apidocCodeKeywordSpan">isConnected</span>(device_id, success, failure);
+
+### Description
+
+Function `isConnected` calls the success callback when the peripheral is connected and the failure callback when *not* connected
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isEnabled" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.isEnabled">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>isEnabled
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnabled = function (success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## isEnabled
+
+Reports if bluetooth is enabled.
+
+    ble.<span class="apidocCodeKeywordSpan">isEnabled</span>(success, failure);
+
+### Description
+
+Function `isEnabled` calls the success callback when Bluetooth is enabled and the failure callback when Bluetooth is *not* enabled
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.read" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.read">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>read
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## read
+
+Reads the value of a characteristic.
+
+    ble.<span class="apidocCodeKeywordSpan">read</span>(device_id, service_uuid, characteristic_uuid, success, failure);
+
+### Description
+
+Function `read` reads the value of the characteristic.
+
+Raw data is passed from native code to the callback as an [ArrayBuffer](#typed-arrays).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.readRSSI" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.readRSSI">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>readRSSI
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readRSSI = function (device_id, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## readRSSI
+
+Read the RSSI value on the device connection.
+
+    ble.<span class="apidocCodeKeywordSpan">readRSSI</span>(device_id, success, failure);
+
+### Description
+
+Samples the RSSI value (a measure of signal strength) on the connection to a bluetooth device. Requires that you have established
+ a connection before invoking (otherwise an error will be raised).
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.scan" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.scan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>scan
+        <span class="apidocSignatureSpan">(services, seconds, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scan = function (services, seconds, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [ble.enable](#enable)
+- [ble.readRSSI](#readrssi)
+
+## scan
+
+Scan and discover BLE peripherals.
+
+ble.<span class="apidocCodeKeywordSpan">scan</span>(services, seconds, success, failure);
+
+### Description
+
+Function `scan` scans for BLE devices.  The success callback is called each time a peripheral is discovered. Scanning automatically
+ stops after the specified number of seconds.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.showBluetoothSettings" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.showBluetoothSettings">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>showBluetoothSettings
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showBluetoothSettings = function (success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Function `stopStateNotifications` calls the success callback when Bluetooth state notifications have been stopped.
+
+## showBluetoothSettings
+
+Show the Bluetooth settings on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">showBluetoothSettings</span>(success, failure);
+
+### Description
+
+Function `showBluetoothSettings` opens the Bluetooth settings for the operating systems.
+
+#### iOS
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startNotification" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startNotification">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startNotification
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startNotification = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## startNotification
+
+Register to be notified when the value of a characteristic changes.
+
+    ble.<span class="apidocCodeKeywordSpan">startNotification</span>(device_id, service_uuid, characteristic_uuid, success, failure
+);
+
+### Description
+
+Function `startNotification` registers a callback that is called *every time* the value of a characteristic changes. This method
+ handles both `notifications` and `indications`. The success callback is called multiple times.
+
+Raw data is passed from native code to the success callback as an [ArrayBuffer](#typed-arrays).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScan" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startScan
+        <span class="apidocSignatureSpan">(services, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startScan = function (services, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.log(JSON.stringify(device));
+}, failure);
+
+## startScan
+
+Scan and discover BLE peripherals.
+
+ble.<span class="apidocCodeKeywordSpan">startScan</span>(services, success, failure);
+
+### Description
+
+Function `startScan` scans for BLE devices.  The success callback is called each time a peripheral is discovered. Scanning will
+continue until `stopScan` is called.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScanWithOptions" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startScanWithOptions">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startScanWithOptions
+        <span class="apidocSignatureSpan">(services, options, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startScanWithOptions = function (services, options, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    function() { console.log("stopScan failed"); }
+);
+
+## startScanWithOptions
+
+Scan and discover BLE peripherals, specifying scan options.
+
+ble.<span class="apidocCodeKeywordSpan">startScanWithOptions</span>(services, options, success, failure);
+
+### Description
+
+Function `startScanWithOptions` scans for BLE devices. It operates similarly to the `startScan` function, but allows you to specify
+ extra options (like allowing duplicate device reports).  The success callback is called each time a peripheral is discovered. Scanning
+ will continue until `stopScan` is called.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startStateNotifications" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.startStateNotifications">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>startStateNotifications
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startStateNotifications = function (success, failure) {
+  notSupported();
+  if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## startStateNotifications
+
+Registers to be notified when Bluetooth state changes on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">startStateNotifications</span>(success, failure);
+
+### Description
+
+Function `startStateNotifications` calls the success callback when the Bluetooth is enabled or disabled on the device.
+
+__States__
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopNotifcation" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopNotifcation">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopNotifcation
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopNotifcation = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopScan" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopScan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopScan
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopScan = function (success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    );
+
+
+## stopScan
+
+Stop scanning for BLE peripherals.
+
+    ble.<span class="apidocCodeKeywordSpan">stopScan</span>(success, failure);
+
+### Description
+
+Function `stopScan` stops scanning for BLE devices.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopStateNotifications" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.stopStateNotifications">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>stopStateNotifications
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopStateNotifications = function (success, failure) {
+  notSupported();
+  if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## stopStateNotifications
+
+Stops state notifications.
+
+    ble.<span class="apidocCodeKeywordSpan">stopStateNotifications</span>(success, failure);
+
+### Description
+
+Function `stopStateNotifications` calls the success callback when Bluetooth state notifications have been stopped.
+
+## showBluetoothSettings
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.write" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.write">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>write
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, data, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (device_id, service_uuid, characteristic_uuid, data, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## write
+
+Writes data to a characteristic.
+
+    ble.<span class="apidocCodeKeywordSpan">write</span>(device_id, service_uuid, characteristic_uuid, data, success, failure);
+
+### Description
+
+Function `write` writes data to a characteristic.
+
+### Parameters
+- __device_id__: UUID or MAC address of the peripheral
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.writeWithoutResponse" id="apidoc.element.cordova-plugin-ble-central.BLECentralPlugin.writeWithoutResponse">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.BLECentralPlugin.</span>writeWithoutResponse
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, data, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeWithoutResponse = function (device_id, service_uuid, characteristic_uuid, data, success, failure) {
+    notSupported();
+    if (failure) failure();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    data[0] = counterInput.value;
+    ble.write(device_id, SERVICE, CHARACTERISTIC, data.buffer, success, failure);
+
+## writeWithoutResponse
+
+Writes data to a characteristic without confirmation from the peripheral.
+
+    ble.<span class="apidocCodeKeywordSpan">writeWithoutResponse</span>(device_id, service_uuid, characteristic_uuid, data, success
+, failure);
+
+### Description
+
+Function `writeWithoutResponse` writes data to a characteristic without a response from the peripheral. You are not notified if
+the write fails in the BLE stack. The success callback is be called when the characteristic is written.
+
+### Parameters
+- __device_id__: UUID or MAC address of the peripheral
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-ble-central.ble" id="apidoc.module.cordova-plugin-ble-central.ble">module cordova-plugin-ble-central.ble</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.connect" id="apidoc.element.cordova-plugin-ble-central.ble.connect">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>connect
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connect = function (device_id, success, failure) {
+    var successWrapper = function(peripheral) {
+        convertToNativeJS(peripheral);
+        success(peripheral);
+    };
+    cordova.exec(successWrapper, failure, 'BLE', 'connect', [device_id]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }, 5000);
+    */
+
+## connect
+
+Connect to a peripheral.
+
+    ble.<span class="apidocCodeKeywordSpan">connect</span>(device_id, connectSuccess, connectFailure);
+
+### Description
+
+Function `connect` connects to a BLE peripheral. The callback is long running. Success will be called when the connection is successful
+. Service and characteristic info will be passed to the success callback in the [peripheral object](#peripheral-data). Failure is
+ called if the connection fails, or later if the peripheral disconnects. An peripheral object is passed to the failure callback.
+
+[ble.scan](#scan) must be called before calling connect, so the plugin has a list of avaiable peripherals.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.disconnect" id="apidoc.element.cordova-plugin-ble-central.ble.disconnect">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>disconnect
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">disconnect = function (device_id, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'disconnect', [device_id]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __connectSuccess__: Success callback function that is invoked when the connection is successful.
+- __connectFailure__: Error callback function, invoked when error occurs or the connection disconnects.
+
+## disconnect
+
+Disconnect.
+
+    ble.<span class="apidocCodeKeywordSpan">disconnect</span>(device_id, [success], [failure]);
+
+### Description
+
+Function `disconnect` disconnects the selected device.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.enable" id="apidoc.element.cordova-plugin-ble-central.ble.enable">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>enable
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">enable = function (success, failure) {
+    cordova.exec(success, failure, "BLE", "enable", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    ble.showBluetoothSettings();
+
+## enable
+
+Enable Bluetooth on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">enable</span>(success, failure);
+
+### Description
+
+Function `enable` prompts the user to enable Bluetooth.
+
+#### Android
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.isConnected" id="apidoc.element.cordova-plugin-ble-central.ble.isConnected">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>isConnected
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isConnected = function (device_id, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'isConnected', [device_id]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the notification is removed. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## isConnected
+
+Reports the connection status.
+
+    ble.<span class="apidocCodeKeywordSpan">isConnected</span>(device_id, success, failure);
+
+### Description
+
+Function `isConnected` calls the success callback when the peripheral is connected and the failure callback when *not* connected
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.isEnabled" id="apidoc.element.cordova-plugin-ble-central.ble.isEnabled">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>isEnabled
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isEnabled = function (success, failure) {
+    cordova.exec(success, failure, 'BLE', 'isEnabled', []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## isEnabled
+
+Reports if bluetooth is enabled.
+
+    ble.<span class="apidocCodeKeywordSpan">isEnabled</span>(success, failure);
+
+### Description
+
+Function `isEnabled` calls the success callback when Bluetooth is enabled and the failure callback when Bluetooth is *not* enabled
+.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.list" id="apidoc.element.cordova-plugin-ble-central.ble.list">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>list
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">list = function (success, failure) {
+    cordova.exec(success, failure, 'BLE', 'list', []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.notify" id="apidoc.element.cordova-plugin-ble-central.ble.notify">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>notify
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">notify = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    console.log("WARNING: notify is deprecated, use startNotification");
+    cordova.exec(success, failure, 'BLE', 'startNotification', [device_id, service_uuid, characteristic_uuid]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.read" id="apidoc.element.cordova-plugin-ble-central.ble.read">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>read
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">read = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'read', [device_id, service_uuid, characteristic_uuid]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## read
+
+Reads the value of a characteristic.
+
+    ble.<span class="apidocCodeKeywordSpan">read</span>(device_id, service_uuid, characteristic_uuid, success, failure);
+
+### Description
+
+Function `read` reads the value of the characteristic.
+
+Raw data is passed from native code to the callback as an [ArrayBuffer](#typed-arrays).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.readRSSI" id="apidoc.element.cordova-plugin-ble-central.ble.readRSSI">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>readRSSI
+        <span class="apidocSignatureSpan">(device_id, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">readRSSI = function (device_id, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'readRSSI', [device_id]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## readRSSI
+
+Read the RSSI value on the device connection.
+
+    ble.<span class="apidocCodeKeywordSpan">readRSSI</span>(device_id, success, failure);
+
+### Description
+
+Samples the RSSI value (a measure of signal strength) on the connection to a bluetooth device. Requires that you have established
+ a connection before invoking (otherwise an error will be raised).
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.scan" id="apidoc.element.cordova-plugin-ble-central.ble.scan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>scan
+        <span class="apidocSignatureSpan">(services, seconds, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">scan = function (services, seconds, success, failure) {
+    var successWrapper = function(peripheral) {
+        convertToNativeJS(peripheral);
+        success(peripheral);
+    };
+    cordova.exec(successWrapper, failure, 'BLE', 'scan', [services, seconds]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- [ble.enable](#enable)
+- [ble.readRSSI](#readrssi)
+
+## scan
+
+Scan and discover BLE peripherals.
+
+ble.<span class="apidocCodeKeywordSpan">scan</span>(services, seconds, success, failure);
+
+### Description
+
+Function `scan` scans for BLE devices.  The success callback is called each time a peripheral is discovered. Scanning automatically
+ stops after the specified number of seconds.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.showBluetoothSettings" id="apidoc.element.cordova-plugin-ble-central.ble.showBluetoothSettings">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>showBluetoothSettings
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">showBluetoothSettings = function (success, failure) {
+    cordova.exec(success, failure, "BLE", "showBluetoothSettings", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Function `stopStateNotifications` calls the success callback when Bluetooth state notifications have been stopped.
+
+## showBluetoothSettings
+
+Show the Bluetooth settings on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">showBluetoothSettings</span>(success, failure);
+
+### Description
+
+Function `showBluetoothSettings` opens the Bluetooth settings for the operating systems.
+
+#### iOS
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.startNotification" id="apidoc.element.cordova-plugin-ble-central.ble.startNotification">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startNotification
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startNotification = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'startNotification', [device_id, service_uuid, characteristic_uuid]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## startNotification
+
+Register to be notified when the value of a characteristic changes.
+
+    ble.<span class="apidocCodeKeywordSpan">startNotification</span>(device_id, service_uuid, characteristic_uuid, success, failure
+);
+
+### Description
+
+Function `startNotification` registers a callback that is called *every time* the value of a characteristic changes. This method
+ handles both `notifications` and `indications`. The success callback is called multiple times.
+
+Raw data is passed from native code to the success callback as an [ArrayBuffer](#typed-arrays).
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.startScan" id="apidoc.element.cordova-plugin-ble-central.ble.startScan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startScan
+        <span class="apidocSignatureSpan">(services, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startScan = function (services, success, failure) {
+    var successWrapper = function(peripheral) {
+        convertToNativeJS(peripheral);
+        success(peripheral);
+    };
+    cordova.exec(successWrapper, failure, 'BLE', 'startScan', [services]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    console.log(JSON.stringify(device));
+}, failure);
+
+## startScan
+
+Scan and discover BLE peripherals.
+
+ble.<span class="apidocCodeKeywordSpan">startScan</span>(services, success, failure);
+
+### Description
+
+Function `startScan` scans for BLE devices.  The success callback is called each time a peripheral is discovered. Scanning will
+continue until `stopScan` is called.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.startScanWithOptions" id="apidoc.element.cordova-plugin-ble-central.ble.startScanWithOptions">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startScanWithOptions
+        <span class="apidocSignatureSpan">(services, options, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startScanWithOptions = function (services, options, success, failure) {
+    var successWrapper = function(peripheral) {
+        convertToNativeJS(peripheral);
+        success(peripheral);
+    };
+    options = options || {};
+    cordova.exec(successWrapper, failure, 'BLE', 'startScanWithOptions', [services, options]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    function() { console.log("stopScan failed"); }
+);
+
+## startScanWithOptions
+
+Scan and discover BLE peripherals, specifying scan options.
+
+ble.<span class="apidocCodeKeywordSpan">startScanWithOptions</span>(services, options, success, failure);
+
+### Description
+
+Function `startScanWithOptions` scans for BLE devices. It operates similarly to the `startScan` function, but allows you to specify
+ extra options (like allowing duplicate device reports).  The success callback is called each time a peripheral is discovered. Scanning
+ will continue until `stopScan` is called.
+
+{
+    "name": "TI SensorTag",
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.startStateNotifications" id="apidoc.element.cordova-plugin-ble-central.ble.startStateNotifications">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>startStateNotifications
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">startStateNotifications = function (success, failure) {
+    cordova.exec(success, failure, "BLE", "startStateNotifications", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## startStateNotifications
+
+Registers to be notified when Bluetooth state changes on the device.
+
+    ble.<span class="apidocCodeKeywordSpan">startStateNotifications</span>(success, failure);
+
+### Description
+
+Function `startStateNotifications` calls the success callback when the Bluetooth is enabled or disabled on the device.
+
+__States__
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.stopNotification" id="apidoc.element.cordova-plugin-ble-central.ble.stopNotification">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopNotification
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopNotification = function (device_id, service_uuid, characteristic_uuid, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'stopNotification', [device_id, service_uuid, characteristic_uuid]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    ble.startNotification(device_id, "FFE0", "FFE1", onData, failure);
+
+## stopNotification
+
+Stop being notified when the value of a characteristic changes.
+
+    ble.<span class="apidocCodeKeywordSpan">stopNotification</span>(device_id, service_uuid, characteristic_uuid, success, failure
+);
+
+### Description
+
+Function `stopNotification` stops a previously registered notification callback.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.stopScan" id="apidoc.element.cordova-plugin-ble-central.ble.stopScan">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopScan
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopScan = function (success, failure) {
+    cordova.exec(success, failure, 'BLE', 'stopScan', []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    );
+
+
+## stopScan
+
+Stop scanning for BLE peripherals.
+
+    ble.<span class="apidocCodeKeywordSpan">stopScan</span>(success, failure);
+
+### Description
+
+Function `stopScan` stops scanning for BLE devices.
+
+### Parameters
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.stopStateNotifications" id="apidoc.element.cordova-plugin-ble-central.ble.stopStateNotifications">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>stopStateNotifications
+        <span class="apidocSignatureSpan">(success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">stopStateNotifications = function (success, failure) {
+    cordova.exec(success, failure, "BLE", "stopStateNotifications", []);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        }
+    );
+
+## stopStateNotifications
+
+Stops state notifications.
+
+    ble.<span class="apidocCodeKeywordSpan">stopStateNotifications</span>(success, failure);
+
+### Description
+
+Function `stopStateNotifications` calls the success callback when Bluetooth state notifications have been stopped.
+
+## showBluetoothSettings
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.write" id="apidoc.element.cordova-plugin-ble-central.ble.write">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>write
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">write = function (device_id, service_uuid, characteristic_uuid, value, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'write', [device_id, service_uuid, characteristic_uuid, value]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+- __success__: Success callback function that is invoked when the connection is successful. [optional]
+- __failure__: Error callback function, invoked when error occurs. [optional]
+
+## write
+
+Writes data to a characteristic.
+
+    ble.<span class="apidocCodeKeywordSpan">write</span>(device_id, service_uuid, characteristic_uuid, data, success, failure);
+
+### Description
+
+Function `write` writes data to a characteristic.
+
+### Parameters
+- __device_id__: UUID or MAC address of the peripheral
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.writeCommand" id="apidoc.element.cordova-plugin-ble-central.ble.writeCommand">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>writeCommand
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeCommand = function (device_id, service_uuid, characteristic_uuid, value, success, failure) {
+    console.log("WARNING: writeCommand is deprecated, use writeWithoutResponse");
+    cordova.exec(success, failure, 'BLE', 'writeWithoutResponse', [device_id, service_uuid, characteristic_uuid, value]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-ble-central.ble.writeWithoutResponse" id="apidoc.element.cordova-plugin-ble-central.ble.writeWithoutResponse">
+        function <span class="apidocSignatureSpan">cordova-plugin-ble-central.ble.</span>writeWithoutResponse
+        <span class="apidocSignatureSpan">(device_id, service_uuid, characteristic_uuid, value, success, failure)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">writeWithoutResponse = function (device_id, service_uuid, characteristic_uuid, value, success, failure) {
+    cordova.exec(success, failure, 'BLE', 'writeWithoutResponse', [device_id, service_uuid, characteristic_uuid, value]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    data[0] = counterInput.value;
+    ble.write(device_id, SERVICE, CHARACTERISTIC, data.buffer, success, failure);
+
+## writeWithoutResponse
+
+Writes data to a characteristic without confirmation from the peripheral.
+
+    ble.<span class="apidocCodeKeywordSpan">writeWithoutResponse</span>(device_id, service_uuid, characteristic_uuid, data, success
+, failure);
+
+### Description
+
+Function `writeWithoutResponse` writes data to a characteristic without a response from the peripheral. You are not notified if
+the write fails in the BLE stack. The success callback is be called when the characteristic is written.
+
+### Parameters
+- __device_id__: UUID or MAC address of the peripheral
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
